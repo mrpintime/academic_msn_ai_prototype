@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSN Academic AI - Architecture & Language Excellence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="workspace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>MSN Academic AI</span>
+                <span class="msn-badge">Community</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#workspace" class="nav-link">Workspace</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <div class="user-menu">
+                    <i class="fas fa-user-circle"></i>
+                    <span>MSN-Memeber</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Exclusive for MSN Community Members</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">AI-Powered</span> Academic Excellence
+                    <br>for Architecture & Language Students
+                </h1>
+                <p class="hero-subtitle">
+                    Specialized AI assistant designed exclusively for MSN community members. Master your research in architecture and language disciplines with intelligent, field-specific support.
+                </p>
+                <div class="disciplines-badges">
+                    <div class="discipline-badge">
+                        <i class="fas fa-building"></i>
+                        <span>Architecture</span>
+                    </div>
+                    <div class="discipline-badge">
+                        <i class="fas fa-language"></i>
+                        <span>Language Studies</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showWorkspace()">
+                        <i class="fas fa-rocket"></i> Start New Project
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToFeatures()">
+                        <i class="fas fa-info-circle"></i> Explore Features
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-glow"></div>
+                    <i class="fas fa-file-alt"></i>
+                    <span>Article Generation</span>
+                </div>
+                <div class="floating-card delay-1">
+                    <div class="card-glow"></div>
+                    <i class="fas fa-search"></i>
+                    <span>Research Analysis</span>
+                </div>
+                <div class="floating-card delay-2">
+                    <div class="card-glow"></div>
+                    <i class="fas fa-chart-line"></i>
+                    <span>Insight Extraction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="msn-banner">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <h3>MSN Community Exclusive Platform</h3>
+                    <p>Tailored tools for Architecture & Language academic excellence</p>
+                </div>
+            </div>
+            <h2 class="section-title">Specialized Tools for MSN Students</h2>
+            <p class="section-subtitle">Choose your workflow and let AI accelerate your architecture and language research</p>
+            
+            <div class="features-grid">
+                <!-- Feature 1: Academic Article Writer - Both Fields -->
+                <div class="feature-card dual-field">
+                    <div class="field-badges-top">
+                        <span class="field-badge arch">Architecture</span>
+                        <span class="field-badge lang">Language</span>
+                    </div>
+                    <div class="feature-icon article-writer-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Academic Article Writer</h3>
+                    <p>Generate complete research papers with automated citations, abstracts, and literature reviews. Adapts to both architecture and language academic writing styles.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Automated Writing</span>
+                        <span class="tag">Citations</span>
+                        <span class="tag">Both Fields</span>
+                    </div>
+                    <div class="feature-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Building & Space Analyzer - Architecture Only -->
+                <div class="feature-card arch-field">
+                    <div class="field-badges-top">
+                        <span class="field-badge arch">Architecture Only</span>
+                        <span class="field-badge text-only">Text-Based</span>
+                    </div>
+                    <div class="feature-icon architecture-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Building & Space Analyzer</h3>
+                    <p>Analyze architectural projects from text descriptions - building systems, spatial designs, and urban planning. Get insights on form, function, materiality, and theory. <strong>Note: No visual analysis for now, text-based only.</strong></p>
+                    <div class="feature-tags">
+                        <span class="tag">Building Analysis</span>
+                        <span class="tag">Spatial Design</span>
+                        <span class="tag">Theory & History</span>
+                    </div>
+                    <div class="feature-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Linguistic Analysis Tool - Language Only -->
+                <div class="feature-card lang-field">
+                    <div class="field-badges-top">
+                        <span class="field-badge lang">Language Only</span>
+                    </div>
+                    <div class="feature-icon language-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Linguistic Analysis Tool</h3>
+                    <p>Analyze texts for linguistic patterns, discourse analysis, phonetics, semantics, and syntax. Perfect for language research and literary analysis.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Discourse</span>
+                        <span class="tag">Semantics</span>
+                        <span class="tag">Syntax Analysis</span>
+                    </div>
+                    <div class="feature-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workspace Modal -->
+    <div id="workspace-modal" class="modal">
+        <div class="modal-content workspace-content">
+            <div class="modal-header">
+                <h2>
+                    <i class="fas fa-rocket"></i>
+                    <span id="workspace-title">Academic Article Writer</span>
+                </h2>
+                <button class="close-btn" onclick="closeWorkspace()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="workspace-body" id="workspace-body">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="msn-community-header">
+                <h2>Trusted by the MSN Community</h2>
+                <p>Excellence in Architecture & Language Education</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>MSN</h3>
+                    <p>Exclusive Platform</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Architecture</h3>
+                    <p>Specialized Support</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Language</h3>
+                    <p>Linguistic Excellence</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Community</h3>
+                    <p>Members Only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- MSN Community Section -->
+    <section class="community-section">
+        <div class="container">
+            <div class="community-content">
+                <div class="community-badge-large">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h2>Built for the MSN Community</h2>
+                <p>This platform is exclusively designed for MSN community members studying Architecture and Language. Our AI understands the unique challenges and requirements of your disciplines.</p>
+                <div class="community-features">
+                    <div class="community-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Architecture-specific terminology and frameworks</span>
+                    </div>
+                    <div class="community-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Language studies methodologies and analysis</span>
+                    </div>
+                    <div class="community-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>MSN academic standards and formatting</span>
+                    </div>
+                    <div class="community-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Community-exclusive knowledge base</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
