@@ -64,11 +64,16 @@ body {
     gap: 0.75rem;
     font-size: 1.5rem;
     font-weight: 800;
+    color: var(--primary-color);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    will-change: transform;
 }
 
 .logo:hover {
@@ -77,15 +82,26 @@ body {
 
 .logo i {
     font-size: 2rem;
+    color: var(--primary-color);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
     animation: rotate 20s linear infinite;
+    -webkit-animation: rotate 20s linear infinite;
+    will-change: transform;
 }
 
 @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
 }
 
 .msn-badge {
@@ -100,7 +116,9 @@ body {
     margin-left: 0.5rem;
     text-transform: uppercase;
     animation: glow 3s ease-in-out infinite;
+    -webkit-animation: glow 3s ease-in-out infinite;
     text-shadow: 0 1px 1px #fff, 0 0 3px #8b5cf6; /* Added light stroke for legibility */
+    will-change: box-shadow;
 }
 
 @keyframes glow {
@@ -108,6 +126,17 @@ body {
         box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
     }
     50% {
+        box-shadow: 0 4px 25px rgba(99, 102, 241, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
+    }
+}
+
+@-webkit-keyframes glow {
+    0%, 100% {
+        -webkit-box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    }
+    50% {
+        -webkit-box-shadow: 0 4px 25px rgba(99, 102, 241, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
         box-shadow: 0 4px 25px rgba(99, 102, 241, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
     }
 }
@@ -270,10 +299,13 @@ body {
 }
 
 .gradient-text {
+    color: var(--primary-color);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 .hero-subtitle {
@@ -340,7 +372,9 @@ body {
     align-items: center;
     gap: 1rem;
     animation: float 6s ease-in-out infinite;
+    -webkit-animation: float 6s ease-in-out infinite;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    will-change: transform;
 }
 
 .floating-card.delay-1 {
@@ -386,6 +420,11 @@ body {
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
+}
+
+@-webkit-keyframes float {
+    0%, 100% { -webkit-transform: translateY(0px); transform: translateY(0px); }
+    50% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
 }
 
 /* Features Section */
@@ -728,9 +767,13 @@ body {
 .msn-community-header h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 .msn-community-header p {
@@ -767,9 +810,13 @@ body {
 .stat-card h3 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+    color: var(--primary-color);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 .stat-card p {
@@ -867,6 +914,8 @@ body {
     justify-content: center;
     margin: 0 auto 2rem;
     animation: pulse 2s ease-in-out infinite;
+    -webkit-animation: pulse 2s ease-in-out infinite;
+    will-change: transform, box-shadow;
 }
 
 @keyframes pulse {
@@ -880,6 +929,21 @@ body {
     }
 }
 
+@-webkit-keyframes pulse {
+    0%, 100% { 
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+    }
+    50% { 
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        -webkit-box-shadow: 0 0 0 20px rgba(99, 102, 241, 0);
+        box-shadow: 0 0 0 20px rgba(99, 102, 241, 0);
+    }
+}
+
 .feedback-icon i {
     font-size: 3rem;
     color: white;
@@ -888,9 +952,13 @@ body {
 .feedback-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--primary-color);
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 .feedback-subtitle {
