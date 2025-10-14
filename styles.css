@@ -178,6 +178,40 @@ body {
     width: 100%;
 }
 
+.github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-hover));
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    padding: 0 !important;
+}
+
+.github-link i {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background: linear-gradient(135deg, #6e5494, #8b5cf6);
+    border-color: #6e5494;
+    transform: scale(1.1) rotate(360deg);
+    box-shadow: 0 5px 20px rgba(110, 84, 148, 0.4);
+}
+
+.github-link:hover i {
+    color: white;
+}
+
+.github-link::before {
+    display: none;
+}
+
 .user-menu {
     display: flex;
     align-items: center;
@@ -1131,13 +1165,22 @@ body {
         display: none;
     }
     
+    .github-link {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .github-link i {
+        font-size: 1.1rem;
+    }
+    
     /* Body Sections */
     .container {
         padding: 0 1rem;
     }
     
     .hero {
-        padding: 6rem 1rem 3rem;
+        padding: 7.5rem 1rem 3rem;
         min-height: auto;
     }
     
@@ -1344,9 +1387,18 @@ body {
         font-size: 1.25rem;
     }
     
+    .github-link {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .github-link i {
+        font-size: 1rem;
+    }
+    
     /* Body */
     .hero {
-        padding: 5rem 0.75rem 2rem;
+        padding: 6.5rem 0.75rem 2rem;
     }
     
     .hero-title {
@@ -1528,7 +1580,7 @@ body {
 /* Landscape Mobile Orientation */
 @media (max-height: 600px) and (orientation: landscape) {
     .hero {
-        padding: 5rem 1rem 2rem;
+        padding: 6rem 1rem 2rem;
         min-height: auto;
     }
     

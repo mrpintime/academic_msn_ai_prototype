@@ -764,6 +764,10 @@ function scrollToFeatures() {
     document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
 }
 
+function scrollToFeedback() {
+    document.getElementById('feedback').scrollIntoView({ behavior: 'smooth' });
+}
+
 // Close modal on ESC key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -781,8 +785,15 @@ document.getElementById('workspace-modal').addEventListener('click', (e) => {
 // Smooth scrolling for navigation
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        
+        // Skip external links (like GitHub)
+        if (href.startsWith('http') || href.startsWith('//')) {
+            return; // Let the browser handle external links normally
+        }
+        
         e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
+        const targetId = href.substring(1);
         const target = document.getElementById(targetId);
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
