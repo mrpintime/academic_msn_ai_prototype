@@ -760,8 +760,8 @@ function showWorkspace() {
     openFeature('article-writer');
 }
 
-function scrollToFeatures() {
-    document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+function scrollToProducts() {
+    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
 }
 
 function scrollToFeedback() {
